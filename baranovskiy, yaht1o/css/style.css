@@ -1,0 +1,4451 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: #515151;
+    overflow-x: hidden;
+    font-weight: normal;
+    background-color: #ebebeb;
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+    -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+}
+body.stop-scroll { overflow: hidden; }
+
+.clearfix {
+    zoom: 1;
+    clear: both;
+}
+
+.section-overflow-visible,
+.section-overflow-visible .section-container {
+    overflow: visible !important;
+}
+
+
+
+a {
+    color: #e74c3c;
+    cursor: pointer;
+    text-decoration: none;
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+a.no-transition {
+    -webkit-transition: all 0s ease-in-out;
+       -moz-transition: all 0s ease-in-out;
+         -o-transition: all 0s ease-in-out;
+            transition: all 0s ease-in-out;
+}
+
+
+/* Hover / Focus
+----------------------------------------------------------------------------- */
+a:hover,
+a:focus {
+    color: #121212;
+    text-decoration: none;
+}
+a:focus { outline: thin dotted; }
+
+
+/* Colors
+============================================================================= */
+/* Selection Color
+----------------------------------------------------------------------------- */
+::selection {
+    color: #ffffff;
+    text-shadow: none;
+    background-color: #121212;
+}
+::-webkit-selection {
+    color: #ffffff;
+    text-shadow: none;
+    background-color: #121212;
+}
+::-moz-selection {
+    color: #ffffff;
+    text-shadow: none;
+    background-color: #121212;
+}
+
+
+/* Main Color
+----------------------------------------------------------------------------- */
+.main-color { color: #e74c3c; }
+
+
+
+/* Background Colors
+============================================================================= */
+/* Main Background
+----------------------------------------------------------------------------- */
+.main-background-color,
+.main-background-color * {
+    color: #ffffff !important;
+}
+.main-background-color { background-color: #e74c3c !important; }
+
+
+/* Black Background
+----------------------------------------------------------------------------- */
+.black-background-color,
+.black-background-color * {
+    color: #ffffff !important;
+}
+.black-background-color { background-color: #121212 !important; }
+.black-background-color.ribbon-block-style-2::after { border-color: #121212; }
+
+
+/* Transparent Black Background
+----------------------------------------------------------------------------- */
+.transparent-black-background-color { background-color: rgba(0, 0, 0, 0.70) !important; }
+
+
+/* White Background
+----------------------------------------------------------------------------- */
+.white-background-color { background-color: #ffffff; }
+
+
+/* Grey Background
+----------------------------------------------------------------------------- */
+.grey-background-color { background-color: #f7f7f7; }
+
+
+
+/* ToolTip
+============================================================================= */
+.tooltip {
+    font-size: 14px;
+    font-weight: 400;
+}
+.tooltip-inner { padding: 8px 15px; }
+
+
+
+/* popover
+============================================================================= */
+.popover {
+    border: 0;
+    padding: 0;
+    border-radius: 2px;
+
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.12);
+       -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+
+
+/* List
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+ol,
+ul {
+    padding: 0;
+    margin: 20px auto 15px;
+    list-style-position: inside;
+}
+ol:first-child,
+ul:first-child {
+    margin-top: -5px;
+}
+ol:last-child,
+ul:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Items
+----------------------------------------------------------------------------- */
+ol li,
+ul li {
+    margin-bottom: 5px;
+}
+ol li:last-of-type,
+ul li:last-of-type {
+    margin-bottom: 0;
+}
+
+
+
+/* List Icon
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+ul.list-icon {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    list-style: none;
+}
+
+
+/* Icon
+----------------------------------------------------------------------------- */
+ul.list-icon li i {
+    color: #e74c3c;
+    margin-left: 1px;
+    margin-right: 5px;
+}
+
+
+/* Style 1
+============================================================================= */
+ul.list-icon-style-1 li {
+    float: left;
+    position: relative;
+    margin-right: 20px;
+}
+ul.list-icon-style-1 li:last-of-type { margin-right: 0; }
+
+
+
+/* List Info
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+ul.list-info {
+    margin: 0;
+    width: 100%;
+    padding: 25px;
+    display: block;
+    overflow: hidden;
+    list-style: none;
+    border-radius: 2px;
+    border: 2px solid #dddddd;
+}
+
+
+/* List
+----------------------------------------------------------------------------- */
+ul.list-info > li {
+    width: 100%;
+    display: block;
+    font-weight: 500;
+    margin-top: 15px;
+    padding-top: 15px;
+    position: relative;
+    border-top: 1px solid #dddddd;
+}
+ul.list-info > li:first-child {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+/* First Div
+----------------------------------------------------------------------------- */
+ul.list-info > li > div:first-child { margin-bottom: 5px; }
+
+
+/* Social Icons
+----------------------------------------------------------------------------- */
+ul.list-info > li .social-icons-block ul li {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/* Style 1
+============================================================================= */
+/* Items
+----------------------------------------------------------------------------- */
+ul.list-info-style-1 > li {
+    float: left;
+    width: 48.5%;
+    line-height: 32px;
+}
+ul.list-info-style-1 > li:nth-child(2n) {
+    float: right;
+}
+ul.list-info-style-1 > li:nth-child(2) {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+/* Divs
+----------------------------------------------------------------------------- */
+ul.list-info-style-1 > li > div:first-child {
+    float: left;
+    margin-bottom: 0;
+}
+ul.list-info-style-1 > li > div:last-child { float: right; }
+
+
+
+/* Ripple Animation
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.wave-effect {
+    z-index: 15;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* Ripple
+----------------------------------------------------------------------------- */
+.lpbuilder-ripple {
+    width: 0;
+    height: 0;
+    opacity: 1;
+    border-radius: 50%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.30);
+
+    -webkit-transform: scale(0);
+       -moz-transform: scale(0);
+        -ms-transform: scale(0);
+         -o-transform: scale(0);
+            transform: scale(0);
+}
+
+
+/* Animation
+----------------------------------------------------------------------------- */
+.ripple-animation {
+    -webkit-animation: rippleCircleAnimation 1.5s linear;
+            animation: rippleCircleAnimation 1.5s linear;
+}
+@-webkit-keyframes rippleCircleAnimation {
+    100% {
+        -webkit-transform: scale(5);
+        opacity: 0;
+    }
+}
+@keyframes rippleCircleAnimation {
+    100% {
+        transform: scale(5);
+        opacity: 0;
+    }
+}
+
+
+
+/* White Content
+============================================================================= */
+.white-content,
+.white-content p,
+.white-content h1,
+.white-content h2,
+.white-content h3,
+.white-content h4,
+.white-content h5,
+.white-content h6,
+.white-content a:hover,
+.white-content .form-control,
+.white-content .form-group label {
+    color: #ffffff;
+}
+
+.white-content .line-separator,
+.white-content .form-group label::before {
+    background-color: #ffffff;
+}
+.white-content .form-group label::before { opacity: 0.30; }
+
+
+
+/* Triangle Arrow
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.triangle-arrow {
+    width: 0;
+    height: 0;
+    left: 25%;
+    z-index: 20;
+    margin-left: 12px;
+    position: absolute;
+    border-top: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+}
+
+
+/* White
+----------------------------------------------------------------------------- */
+.triangle-arrow.white-arrow { border-top: 15px solid #ffffff; }
+
+
+/* Grey
+----------------------------------------------------------------------------- */
+.triangle-arrow.grey-arrow { border-top: 15px solid #f7f7f7; }
+
+
+
+/* Label
+============================================================================= */
+.label {
+    font-weight: 600;
+    border-radius: 2px;
+    padding: 5px 15px 3px;
+}
+.label-main { background-color: #e74c3c; }
+
+
+
+
+/* =============================================================================
+   2. Typography
+============================================================================= */
+/* Heading
+============================================================================= */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    color: #121212;
+    letter-spacing: 0;
+    margin: 0 auto 10px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+}
+h2 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+}
+h3 { font-size: 26px; font-weight: 600; line-height: 1.3; }
+h4 { font-size: 20px; font-weight: 600; line-height: 1.3; }
+h5 { font-size: 18px; font-weight: 500; line-height: 1.4; }
+h6 { font-size: 16px; font-weight: 600; line-height: 1.4; }
+
+
+
+/* Montserrat Font
+============================================================================= */
+h1,
+h2,
+.tooltip,
+.btn-lpbuilder,
+.navbar-brand,
+.btn-lpbuilder-white {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+
+
+/* Poppins Font
+============================================================================= */
+.popover {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+
+
+/* Paragraph
+============================================================================= */
+p { margin: 0 0 15px 0; }
+p:last-of-type { margin-bottom: 0; }
+
+
+
+/* Large Heading
+============================================================================= */
+.lg-heading,
+.title-block-container.text-center .lg-heading {
+    font-size: 150px;
+}
+
+
+
+/* Small Heading
+============================================================================= */
+.sm-heading,
+.title-block-container.text-center .sm-heading {
+    font-size: 45px;
+}
+
+
+
+/* Small Paragraph
+============================================================================= */
+.sm-p,
+.hero-section .title-block-container.text-center p.sm-p {
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+
+
+
+/* =============================================================================
+   3. Loader Block
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.loader-block {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 999999;
+    position: fixed;
+    text-align: center;
+    background-color: #ffffff;
+}
+.no-js .loader-block { display: none; }
+
+
+/* Container
+----------------------------------------------------------------------------- */
+.loader-block-container {
+    top: 50%;
+    left: 50%;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+
+
+/* Circle Block
+----------------------------------------------------------------------------- */
+.circle-block {
+    margin: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    position: relative;
+    border: 4px solid #dddddd;
+
+    -webkit-animation: lpbuilder-spin 0.75s infinite linear;
+            animation: lpbuilder-spin 0.75s infinite linear;
+}
+.circle-block::before,
+.circle-block::after {
+    top: -4px;
+    left: -4px;
+    content: '';
+    display: none;
+    width: inherit;
+    height: inherit;
+    border: inherit;
+    position: absolute;
+    border-radius: inherit;
+}
+
+
+/* Animation
+============================================================================= */
+@-webkit-keyframes lpbuilder-spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes lpbuilder-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+
+
+/* Style 1
+============================================================================= */
+.circle-block-style-1 { border-top-width: 0; }
+
+
+
+/* Style 2
+============================================================================= */
+.circle-block-style-2 { border-top-color: transparent; }
+.circle-block-style-2::after {
+    display: block;
+
+    -webkit-transform: rotate(65deg);
+       -moz-transform: rotate(65deg);
+        -ms-transform: rotate(65deg);
+         -o-transform: rotate(65deg);
+            transform: rotate(65deg);
+}
+
+
+
+/* Style 3
+============================================================================= */
+.circle-block-style-3 {
+    border-color: transparent;
+    border-top-color: #dddddd;
+}
+.circle-block-style-3::after,
+.circle-block-style-3::before {
+    display: block;
+
+    -webkit-animation-duration: 1.2s;
+            animation-duration: 1.2s;
+}
+.circle-block-style-3::before {
+    -webkit-transform: rotate(120deg);
+       -moz-transform: rotate(120deg);
+        -ms-transform: rotate(120deg);
+         -o-transform: rotate(120deg);
+            transform: rotate(120deg);
+}
+.circle-block-style-3::after {
+    -webkit-transform: rotate(240deg);
+       -moz-transform: rotate(240deg);
+        -ms-transform: rotate(240deg);
+         -o-transform: rotate(240deg);
+            transform: rotate(240deg);
+}
+
+
+
+/* Style 4
+============================================================================= */
+.circle-block-style-4 { border-top-color: transparent; }
+.circle-block-style-4::after {
+    display: block;
+    border-color: transparent;
+    border-top-color: #dddddd;
+
+    -webkit-animation: lpbuilder-spin 1.25s infinite linear reverse;
+            animation: lpbuilder-spin 1.25s infinite linear reverse;
+}
+
+
+
+/* Style 5
+============================================================================= */
+.circle-block-style-5 {
+    border-color: transparent;
+    border-top-color: #dddddd;
+
+    -webkit-animation: lpbuilder-spin 1s infinite ease;
+            animation: lpbuilder-spin 1s infinite ease;
+}
+.circle-block-style-5::after {
+    display: block;
+
+    -webkit-animation: lpbuilder-spin 1.5s infinite ease;
+            animation: lpbuilder-spin 1.5s infinite ease;
+}
+
+
+
+/* Style 6
+============================================================================= */
+.circle-block-style-6 {
+    border-color: transparent;
+    border-top-color: #dddddd;
+
+    -webkit-animation: lpbuilder-spin 1s infinite ease-in-out alternate;
+            animation: lpbuilder-spin 1s infinite ease-in-out alternate;
+}
+.circle-block-style-6::after {
+    display: block;
+
+    -webkit-animation: lpbuilder-spin 1.5s infinite ease-in-out alternate;
+            animation: lpbuilder-spin 1.5s infinite ease-in-out alternate;
+}
+
+
+
+
+/* =============================================================================
+   4. Main Wrapper
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+#main-wrapper {
+    padding: 0;
+    z-index: 2;
+    opacity: 1;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    min-height: 100vh;
+    max-width: 1600px;
+    position: relative;
+    background-color: #ffffff;
+
+    -webkit-transition: all 0.50s ease-in-out;
+       -moz-transition: all 0.50s ease-in-out;
+         -o-transition: all 0.50s ease-in-out;
+            transition: all 0.50s ease-in-out;
+}
+.no-js #main-wrapper { opacity: 1; }
+
+
+/* Full Width Wrapper
+----------------------------------------------------------------------------- */
+body.full-width-page #main-wrapper { max-width: 100%; }
+
+
+
+
+/* =============================================================================
+   5. Header
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.header-section {
+    width: 100%;
+    z-index: 101;
+    display: block;
+    position: relative;
+    background-color: #ffffff;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
+       -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Container
+----------------------------------------------------------------------------- */
+.header-section-container {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+
+
+
+/* =============================================================================
+   6. Top Header
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.top-header {
+    z-index: 3;
+    width: 100%;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
+}
+
+
+/* Social Icons Block
+----------------------------------------------------------------------------- */
+.top-header .social-icons-block {
+    padding: 1px 15px;
+    text-align: right;
+}
+
+
+/* ADS Block
+----------------------------------------------------------------------------- */
+.top-header .ads-block-container { margin-bottom: 0; }
+
+
+
+
+/* =============================================================================
+   7. Main Menu
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.header-menu {
+    z-index: 4;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+
+/* Container
+----------------------------------------------------------------------------- */
+.header-menu-container {
+    z-index: 4;
+    width: 100%;
+    display: block;
+    position: relative;
+    background-color: #ffffff;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+
+
+/* Logo
+----------------------------------------------------------------------------- */
+/* Link
+--------------------------------------------------------- */
+.navbar-brand {
+    padding: 0;
+    height: auto;
+    margin: 0 auto;
+    color: #121212;
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 80px;
+    text-transform: uppercase;
+}
+.navbar > .container .navbar-brand,
+.navbar > .container-fluid .navbar-brand {
+    margin: 0;
+}
+
+/* Image
+--------------------------------------------------------- */
+.navbar-brand > img {
+    max-width: 100%;
+    max-height: 44px;
+    margin-top: -4px;
+    display: inline-block;
+    vertical-align: middle;
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+
+
+/* Menu
+----------------------------------------------------------------------------- */
+/* Main Wrapper
+--------------------------------------------------------- */
+.navbar {
+    border: 0;
+    margin: 0;
+    border-radius: 0;
+}
+.navbar-collapse.collapse { padding: 0; }
+
+/* List ( Menu )
+--------------------------------------------------------- */
+ul.navbar-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Items
+--------------------------------------------------------- */
+ul.navbar-nav > li {
+    margin: 0 15px;
+    position: relative;
+}
+ul.navbar-nav > li:last-child { margin-right: 0; }
+ul.navbar-nav > li:first-child { margin-left: 0; }
+
+/* Link
+--------------------------------------------------------- */
+/* Wrapper
+------------------------------------- */
+ul.navbar-nav > li > a:not(.btn) {
+    opacity: 0.75;
+    color: #121212;
+    font-size: 14px;
+    overflow: hidden;
+    font-weight: 500;
+    padding: 1px 0 0;
+    line-height: 73px;
+    position: relative;
+    text-transform: uppercase;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+}
+ul.navbar-nav > li.parent-list > a { border-bottom-color: transparent !important; }
+
+/* Hover / Focus
+------------------------------------- */
+ul.navbar-nav > li > a:not(.btn):hover,
+ul.navbar-nav > li.active > a:not(.btn) {
+    opacity: 1;
+    border-bottom-color: #e74c3c;
+    background-color: transparent;
+}
+ul.navbar-nav > li > a:not(.btn):focus { background-color: transparent; }
+
+
+/* Button
+--------------------------------------------------------- */
+ul.navbar-nav > li > a.btn {
+    height: 44px;
+    margin: 18px 0;
+    padding: 0 30px;
+    line-height: 44px;
+}
+
+
+
+
+/* =============================================================================
+   8. Menu Button
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.navbar-toggle {
+    border: 0;
+    padding: 0;
+    height: 22px;
+    margin: 29px 0;
+    color: #000000;
+    font-size: 15px;
+    overflow: hidden;
+    border-radius: 0;
+    font-weight: 500;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+
+/* Container
+----------------------------------------------------------------------------- */
+.navbar-toggle > span {
+    width: 21px;
+    height: 21px;
+    font-size: 16px;
+    overflow: hidden;
+    line-height: 21px;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+
+    -webkit-transform-origin: center;
+       -moz-transform-origin: center;
+        -ms-transform-origin: center;
+         -o-transform-origin: center;
+            transform-origin: center;
+
+    -webkit-transition: transform 0.30s ease-in-out;
+       -moz-transition: transform 0.30s ease-in-out;
+         -o-transition: transform 0.30s ease-in-out;
+            transition: transform 0.30s ease-in-out;
+
+    -webkit-animation: lpbuilderAnimationSpan 1s forwards;
+            animation: lpbuilderAnimationSpan 1s forwards;
+}
+@-webkit-keyframes lpbuilderAnimationSpan {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(180deg);
+    }
+}
+@keyframes lpbuilderAnimationSpan {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+/* Middle Line
+----------------------------------------------------------------------------- */
+.navbar-toggle > span i.lines {
+    width: 100%;
+    height: 3px;
+    display: block;
+    margin-top: 9px;
+    position: relative;
+    background-color: #000000;
+
+    -webkit-animation: lpbuilderAnimationLines 1s forwards;
+            animation: lpbuilderAnimationLines 1s forwards;
+
+}
+@-webkit-keyframes lpbuilderAnimationLines {
+    0%, 50% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: #000000;
+    }
+}
+@keyframes lpbuilderAnimationLines {
+    0%, 50% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: #000000;
+    }
+}
+
+
+/* Top / Bottom Lines
+----------------------------------------------------------------------------- */
+/* Wrapper
+--------------------------------------------------------- */
+.navbar-toggle > span i.lines:after,
+.navbar-toggle > span i.lines:before {
+    left: 0;
+    height: 3px;
+    width: 100%;
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: #000000;
+
+    -webkit-transform-origin: center;
+       -moz-transform-origin: center;
+        -ms-transform-origin: center;
+         -o-transform-origin: center;
+            transform-origin: center;
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+
+/* Bottom Line
+--------------------------------------------------------- */
+.navbar-toggle > span i.lines:after {
+    -webkit-animation: lpbuilderAnimationAfter 1.5s forwards;
+            animation: lpbuilderAnimationAfter 1.5s forwards;
+}
+@-webkit-keyframes lpbuilderAnimationAfter {
+    0% {
+        bottom: 0;
+        -webkit-transform: rotate(45deg);
+    }
+    50% {
+        bottom: 0;
+        -webkit-transform: rotate(0);
+    }
+    100% {
+        bottom: -6px;
+    }
+}
+@keyframes lpbuilderAnimationAfter {
+    0% {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    50% {
+        bottom: 0;
+        transform: rotate(0);
+    }
+    100% {
+        bottom: -6px;
+    }
+}
+
+/* Top Line
+--------------------------------------------------------- */
+.navbar-toggle > span i.lines:before {
+    -webkit-animation: lpbuilderAnimationBefore 1.5s forwards;
+            animation: lpbuilderAnimationBefore 1.5s forwards;
+}
+@-webkit-keyframes lpbuilderAnimationBefore {
+    0% {
+        top: 0;
+        -webkit-transform: rotate(-45deg);
+    }
+    50% {
+        top: 0;
+        -webkit-transform: rotate(0);
+    }
+    100% {
+        top: -6px;
+    }
+}
+@keyframes lpbuilderAnimationBefore {
+    0% {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    50% {
+        top: 0;
+        transform: rotate(0);
+    }
+    100% {
+        top: -6px;
+    }
+}
+
+
+/* Toggle
+----------------------------------------------------------------------------- */
+/* Container
+--------------------------------------------------------- */
+.navbar-toggle.lpbuilder-toggle > span {
+    -webkit-animation: lpbuilderToggleAnimationSpan 1s forwards;
+            animation: lpbuilderToggleAnimationSpan 1s forwards;
+}
+@-webkit-keyframes lpbuilderToggleAnimationSpan {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-180deg);
+    }
+}
+@keyframes lpbuilderToggleAnimationSpan {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-180deg);
+    }
+}
+
+/* Middle Line
+--------------------------------------------------------- */
+.navbar-toggle.lpbuilder-toggle > span i.lines {
+    -webkit-animation: lpbuilderToggleAnimationLines 1s forwards;
+            animation: lpbuilderToggleAnimationLines 1s forwards;
+}
+@-webkit-keyframes lpbuilderToggleAnimationLines {
+    0%, 50% {
+        background-color: #000000;
+    }
+    51%, 100% {
+        background-color: transparent;
+    }
+}
+@keyframes lpbuilderToggleAnimationLines {
+    0%, 50% {
+        background-color: #000000;
+    }
+    51%, 100% {
+        background-color: transparent;
+    }
+}
+
+/* Bototm Line
+--------------------------------------------------------- */
+.navbar-toggle.lpbuilder-toggle > span i.lines:after {
+    -webkit-animation: lpbuilderToggleAnimationAfter 1s forwards;
+            animation: lpbuilderToggleAnimationAfter 1s forwards;
+}
+@-webkit-keyframes lpbuilderToggleAnimationAfter {
+    0% {
+        bottom: -6px;
+    }
+    50% {
+        bottom: 0;
+        -webkit-transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+@keyframes lpbuilderToggleAnimationAfter {
+    0% {
+        bottom: -6px;
+    }
+    50% {
+        bottom: 0;
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+/* Top Line
+--------------------------------------------------------- */
+.navbar-toggle.lpbuilder-toggle > span i.lines:before {
+    -webkit-animation: lpbuilderToggleAnimationBefore 1s forwards;
+            animation: lpbuilderToggleAnimationBefore 1s forwards;
+}
+@-webkit-keyframes lpbuilderToggleAnimationBefore {
+    0% {
+        top: -6px;
+    }
+    50% {
+        top: 0;
+        -webkit-transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(-45deg);
+    }
+}
+@keyframes lpbuilderToggleAnimationBefore {
+    0% {
+        top: -6px;
+    }
+    50% {
+        top: 0;
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(-45deg);
+    }
+}
+
+
+
+
+/* =============================================================================
+   9. Sub Menu
+============================================================================= */
+/* Ripple
+----------------------------------------------------------------------------- */
+.sub-menu .lpbuilder-ripple { background-color: rgba(0, 0, 0, 0.10); }
+
+
+/* Arrow
+----------------------------------------------------------------------------- */
+/* Wrapper
+--------------------------------------------------------- */
+.menu-arrow {
+    width: 11px;
+    height: 20px;
+    font-size: 16px;
+    overflow: hidden;
+    margin-left: 5px;
+    line-height: 20px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Icon
+--------------------------------------------------------- */
+.menu-arrow i.fa {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+
+/* List
+----------------------------------------------------------------------------- */
+ul.navbar-nav > li > ul.sub-menu {
+    width: 0;
+    height: 0;
+    top: 10px;
+    margin: 0;
+    padding: 0;
+    left: -20px;
+    z-index: 16;
+    list-style: none;
+    overflow: hidden;
+    text-align: left;
+    position: absolute;
+    background-color: #ffffff;
+
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+       -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Items
+----------------------------------------------------------------------------- */
+ul.navbar-nav > li > ul.sub-menu li {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+ul.navbar-nav > li > ul.sub-menu li:first-child { margin-top: 10px; }
+
+
+/* Link
+----------------------------------------------------------------------------- */
+/* Wrapper
+--------------------------------------------------------- */
+ul.navbar-nav > li > ul.sub-menu li a {
+    width: 100%;
+    opacity: 0.75;
+    display: block;
+    color: #121212;
+    font-size: 14px;
+    font-weight: 500;
+    overflow: hidden;
+    line-height: 22px;
+    padding: 10px 20px;
+    position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Hover
+--------------------------------------------------------- */
+ul.navbar-nav > li > ul.sub-menu li a:hover {
+    opacity: 1;
+    background-color: #ebebeb;
+}
+
+
+/* Main Item ( First Item )
+----------------------------------------------------------------------------- */
+ul.navbar-nav > li > ul.sub-menu li:first-child > a {
+    opacity: 1;
+    text-transform: uppercase;
+}
+ul.navbar-nav > li > ul.sub-menu li:first-child > a:hover { background-color: transparent; }
+
+
+
+
+/* =============================================================================
+   10. Alternative Header
+============================================================================= */
+/* Fixed Header
+============================================================================= */
+.header-menu-container.header-menu-stuck {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    position: fixed;
+
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
+       -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
+}
+
+
+
+/* Tiny Header
+============================================================================= */
+/* Logo
+----------------------------------------------------------------------------- */
+.header-menu-container.header-menu-tiny .navbar-brand { line-height: 60px; }
+.header-menu-container.header-menu-tiny .navbar-brand > img { max-height: 44px; }
+
+
+/* Menu Button
+----------------------------------------------------------------------------- */
+.header-menu-container.header-menu-tiny .navbar-toggle { margin: 19px 0; }
+
+
+/* Menu Links
+----------------------------------------------------------------------------- */
+.header-menu-container.header-menu-tiny ul.navbar-nav > li > a:not(.btn) { line-height: 53px; }
+
+
+/* Button
+----------------------------------------------------------------------------- */
+.header-menu-container.header-menu-tiny ul.navbar-nav li a.btn { margin: 8px 0; }
+
+
+/* Sub Menu
+----------------------------------------------------------------------------- */
+.header-menu-container.header-menu-tiny ul.navbar-nav > li > ul.sub-menu { top: 0; }
+
+
+
+/* Auto Hide Header
+============================================================================= */
+.header-menu-container.header-menu-autohide { top: -90px; }
+
+
+
+
+/* =============================================================================
+   11. Header Styles
+============================================================================= */
+/* Left / Center Header Menu
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.header-menu.header-menu-left,
+.header-menu.header-menu-center {
+    font-size: 0;
+    line-height: 0;
+}
+.header-menu.header-menu-left { text-align: left; }
+.header-menu.header-menu-center { text-align: center; }
+
+
+/* Menu
+----------------------------------------------------------------------------- */
+/* Wrapper
+--------------------------------------------------------- */
+.header-menu.header-menu-left .navbar-collapse.collapse,
+.header-menu.header-menu-center .navbar-collapse.collapse {
+    display: inline-block !important;
+}
+
+/* Links
+--------------------------------------------------------- */
+.header-menu.header-menu-left ul.navbar-nav > li > a:not(.btn),
+.header-menu.header-menu-center ul.navbar-nav > li > a:not(.btn) {
+    line-height: 53px;
+}
+
+/* Button
+--------------------------------------------------------- */
+.header-menu.header-menu-left ul.navbar-nav li a.btn,
+.header-menu.header-menu-center ul.navbar-nav li a.btn {
+    margin: 8px 0;
+}
+
+
+/* Sub Menu
+----------------------------------------------------------------------------- */
+.header-menu.header-menu-left ul.navbar-nav > li > ul.sub-menu,
+.header-menu.header-menu-center ul.navbar-nav > li > ul.sub-menu {
+    top: 0;
+}
+
+
+/* Social Icons Block
+----------------------------------------------------------------------------- */
+.header-menu.header-menu-left .social-icons-block {
+    width: auto;
+    float: right;
+    padding: 9px 0;
+    text-align: right;
+}
+
+
+
+/* Style 2
+============================================================================= */
+/* Top Header
+----------------------------------------------------------------------------- */
+.header-style-2 .top-header { padding: 18px 0; }
+
+
+
+/* Style 3
+============================================================================= */
+/* Social Icons Block
+----------------------------------------------------------------------------- */
+.header-style-3 .social-icons-block { padding: 19px 15px; }
+
+
+/* Logo
+----------------------------------------------------------------------------- */
+.header-style-3 .header-menu-container .navbar-header { display: none; }
+
+
+
+/* Style 4
+============================================================================= */
+/* Top Header
+----------------------------------------------------------------------------- */
+/* Wrapper
+--------------------------------------------------------- */
+.header-style-4 .top-header { text-align: center; }
+
+/* Logo
+--------------------------------------------------------- */
+/* Top Header
+------------------------------------- */
+.header-style-4 .top-header .navbar-header {
+    float: none;
+    display: inline-block;
+}
+
+/* Menu
+------------------------------------- */
+.header-style-4 .header-menu-container .navbar-header { display: none; }
+
+
+
+/* Style 5
+============================================================================= */
+/* Top Header
+----------------------------------------------------------------------------- */
+/* Wrapper
+--------------------------------------------------------- */
+.header-style-5 .top-header {
+    z-index: 2;
+    padding: 15px 0 0;
+}
+.header-style-5 .top-header .col-md-12 { text-align: center; }
+
+/* Logo
+--------------------------------------------------------- */
+/* Top Header
+------------------------------------- */
+.header-style-5 .top-header .navbar-header {
+    float: none;
+    margin-top: -35px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+/* Menu
+------------------------------------- */
+.header-style-5 .header-menu-container .navbar-header { display: none; }
+
+
+
+/* Style 6
+============================================================================= */
+/* Top Header
+----------------------------------------------------------------------------- */
+.header-style-6 .top-header { text-align: right; }
+
+
+/* Info Block
+----------------------------------------------------------------------------- */
+.header-style-6 .info-block { padding: 18px 0; }
+
+
+/* Logo
+----------------------------------------------------------------------------- */
+.header-style-6 .header-menu-container .navbar-header { display: none; }
+
+
+
+/* Style 7
+============================================================================= */
+/* Top Header
+----------------------------------------------------------------------------- */
+.header-style-7 .top-header { text-align: right; }
+
+
+/* Info Block
+----------------------------------------------------------------------------- */
+.header-style-7 .info-block { padding: 18px 0; }
+
+
+
+/* Style 8
+============================================================================= */
+/* Top Header
+----------------------------------------------------------------------------- */
+.header-style-8 .top-header { text-align: right; }
+
+
+
+/* Style 9
+============================================================================= */
+/* Top Header
+----------------------------------------------------------------------------- */
+/* Wrapper
+--------------------------------------------------------- */
+.header-style-9 .top-header { padding: 25px 0; }
+
+/* Logo
+--------------------------------------------------------- */
+.header-style-9 .top-header .navbar-header { padding: 5px 0; }
+
+
+
+/* Style 10
+============================================================================= */
+/* Top Header
+----------------------------------------------------------------------------- */
+/* Wrapper
+--------------------------------------------------------- */
+.header-style-10 .top-header { text-align: center; }
+
+/* Logo
+--------------------------------------------------------- */
+.header-style-10 .top-header .navbar-header {
+    float: none;
+    display: inline-block;
+}
+
+
+
+
+/* =============================================================================
+   12. Buttons
+============================================================================= */
+/* Button
+============================================================================= */
+button {
+    outline: none !important;
+
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+
+
+
+/* Special Buttons
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.btn-lpbuilder,
+.btn-lpbuilder-white {
+    border: 0;
+    z-index: 15;
+    font-size: 14px;
+    overflow: hidden;
+    font-weight: 700;
+    line-height: 24px;
+    position: relative;
+    padding: 10px 30px;
+    border-radius: 2px;
+    margin: 30px 10px 0 0;
+    outline: none !important;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+       -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+.hero-section .btn-lpbuilder,
+.hero-section .btn-lpbuilder-white {
+    margin-bottom: 5px;
+}
+a.btn:last-of-type { margin-right: 0; }
+
+.btn-lpbuilder *,
+.btn-lpbuilder-white * {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Overlayer
+----------------------------------------------------------------------------- */
+.btn-lpbuilder::after,
+.btn-lpbuilder-white::after {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.15);
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+
+
+/* Main Button
+----------------------------------------------------------------------------- */
+.btn-lpbuilder,
+.btn-lpbuilder:focus {
+    color: #ffffff !important;
+    background-color: #e74c3c !important;
+}
+.btn-lpbuilder * { color: #ffffff; }
+
+
+/* White Button
+----------------------------------------------------------------------------- */
+.btn-lpbuilder-white,
+.btn-lpbuilder-white:focus {
+    color: #121212 !important;
+    background-color: #ffffff !important;
+}
+.btn-lpbuilder-white * { color: #121212; }
+
+.btn-lpbuilder-white::after { background-color: rgba(0, 0, 0, 0.08); }
+.btn-lpbuilder-white .lpbuilder-ripple { background: rgba(0, 0, 0, 0.15); }
+
+
+/* Hover / Active / Focus
+----------------------------------------------------------------------------- */
+.btn-lpbuilder:hover,
+.btn-lpbuilder.active,
+.btn-lpbuilder:active,
+.btn-lpbuilder-white:hover,
+.btn-lpbuilder-white.active,
+.btn-lpbuilder-white:active {
+	box-shadow: inset 0 0 20px rgba(0,0,0,.2),
+    0 1px 0 rgba(255,255,255,0.1),
+    inset 0 2px 0 rgba(0,0,0,.1);
+    /* 
+	-webkit-box-shadow: 0 5px 11px rgba(0, 0, 0, 0.18), 0 4px 15px rgba(0, 0, 0, 0.15);
+       -moz-box-shadow: 0 5px 11px rgba(0, 0, 0, 0.18), 0 4px 15px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 5px 11px rgba(0, 0, 0, 0.18), 0 4px 15px rgba(0, 0, 0, 0.15); 
+	*/
+}
+
+.btn-lpbuilder:hover::after,
+.btn-lpbuilder:focus::after,
+.btn-lpbuilder-white:hover::after,
+.btn-lpbuilder-white:focus::after {
+    opacity: 1;
+}
+
+
+
+/* Link Button
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.btn-lpbuilder-link {
+    border: 0;
+    z-index: 4;
+    color: #121212;
+    font-size: 15px;
+    overflow: hidden;
+    font-weight: 500;
+    padding: 7px 15px;
+    line-height: 24px;
+    position: relative;
+    border-radius: 2px;
+    vertical-align: bottom;
+    outline: none !important;
+    margin: 20px 10px -15px -15px;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+.btn-lpbuilder-link:last-child { margin-right: 0; }
+
+
+/* Overlayer
+----------------------------------------------------------------------------- */
+.btn-lpbuilder-link::after {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.15);
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+
+
+/* Ripple
+----------------------------------------------------------------------------- */
+.btn-lpbuilder-link .lpbuilder-ripple { background-color: rgba(0, 0, 0, 0.15); }
+
+
+/* Hover / Active / Focus
+----------------------------------------------------------------------------- */
+.btn-lpbuilder-link:hover,
+.btn-lpbuilder-link:focus,
+.btn-lpbuilder-link.active,
+.btn-lpbuilder-link:active {
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+}
+
+.btn-lpbuilder-link:hover::after,
+.btn-lpbuilder-link:focus::after {
+    opacity: 1;
+}
+
+
+
+/* Button Sizes
+============================================================================= */
+/* Large Button
+----------------------------------------------------------------------------- */
+.btn-lpbuilder-lg {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 20px 40px;
+    white-space: normal;
+}
+
+
+/* Small Button
+----------------------------------------------------------------------------- */
+.btn-lpbuilder-sm {
+    font-size: 13px;
+    padding: 8px 20px;
+}
+
+
+
+/* Circle Button
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.btn-lpbuilder-circle {
+    border: 0;
+    padding: 0;
+    z-index: 15;
+    color: #ffffff;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block;
+    outline: none !important;
+    background-color: #e74c3c;
+}
+
+
+/* Large Button
+----------------------------------------------------------------------------- */
+.btn-lpbuilder-circle-lg {
+    width: 64px;
+    height: 64px;
+    font-size: 22px;
+    line-height: 64px;
+
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+       -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Medium Button
+----------------------------------------------------------------------------- */
+.btn-lpbuilder-circle-md {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+    line-height: 48px;
+
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+       -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Small Button
+----------------------------------------------------------------------------- */
+.btn-lpbuilder-circle-sm {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    line-height: 32px;
+
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.10), 0 1px 2px rgba(0, 0, 0, 0.20);
+       -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.10), 0 1px 2px rgba(0, 0, 0, 0.20);
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.10), 0 1px 2px rgba(0, 0, 0, 0.20);
+}
+
+
+/* Icon
+----------------------------------------------------------------------------- */
+.btn-lpbuilder-circle i.fa {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+}
+.btn-lpbuilder-circle-lg i.fa { line-height: 64px; }
+.btn-lpbuilder-circle-md i.fa { line-height: 48px; }
+.btn-lpbuilder-circle-sm i.fa { line-height: 32px; }
+
+.btn-lpbuilder-circle-lg i.fa-play { padding-left: 7px; }
+.btn-lpbuilder-circle-md i.fa-play { padding-left: 5px; }
+.btn-lpbuilder-circle-sm i.fa-play { padding-left: 3px; }
+
+
+/* Ripple
+----------------------------------------------------------------------------- */
+.btn-lpbuilder-circle .lpbuilder-ripple { background-color: rgba(0, 0, 0, 0.15); }
+
+
+/* Hover / Focus
+----------------------------------------------------------------------------- */
+.btn-lpbuilder-circle:hover,
+.btn-lpbuilder-circle:focus {
+    color: #121212;
+    background-color: #ffffff;
+}
+
+
+
+/* Image Button
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+a.btn-lpbuilder-image {
+    border: 0;
+    padding: 0;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    border-radius: 2px;
+    margin: 30px 10px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+    outline: none !important;
+    background-color: #121212;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+       -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+a.btn-lpbuilder-image:last-of-type { margin-right: 0; }
+.hero-section a.btn-lpbuilder-image { margin-bottom: 5px; }
+
+
+/* Image
+----------------------------------------------------------------------------- */
+a.btn-lpbuilder-image img {
+    width: 100%;
+    display: block;
+    max-width: 170px;
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+
+
+/* Hover
+----------------------------------------------------------------------------- */
+a.btn-lpbuilder-image:hover {
+    -webkit-box-shadow: 0 5px 11px rgba(0, 0, 0, 0.18), 0 4px 15px rgba(0, 0, 0, 0.15);
+       -moz-box-shadow: 0 5px 11px rgba(0, 0, 0, 0.18), 0 4px 15px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 5px 11px rgba(0, 0, 0, 0.18), 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+/* =============================================================================
+   13. Main Sections
+============================================================================= */
+/* Container
+----------------------------------------------------------------------------- */
+.section-container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    padding: 100px 0 70px;
+}
+
+
+
+/* Main
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.grey-section,
+.black-section,
+.white-section {
+    padding: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* Grey
+----------------------------------------------------------------------------- */
+.grey-section { background-color: #f7f7f7; }
+
+
+/* Black
+----------------------------------------------------------------------------- */
+.black-section { background-color: #121212; }
+
+
+/* White
+----------------------------------------------------------------------------- */
+.white-section { background-color: #ffffff; }
+
+
+/* Hero
+----------------------------------------------------------------------------- */
+.hero-section { font-size: 18px; }
+
+
+/* Single
+----------------------------------------------------------------------------- */
+.single-section .post-block-container {
+    border: 0;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+}
+
+
+
+/* Padding
+============================================================================= */
+/* Large Padding
+----------------------------------------------------------------------------- */
+.section-lg-padding > .section-container { padding: 160px 0 130px !important; }
+
+
+/* Medium Padding
+----------------------------------------------------------------------------- */
+.section-md-padding > .section-container { padding: 145px 0 115px !important; }
+
+
+/* Small Padding
+----------------------------------------------------------------------------- */
+.section-sm-padding > .section-container { padding: 125px 0 95px !important; }
+
+
+/* XSmall Padding
+----------------------------------------------------------------------------- */
+.section-xs-padding > .section-container { padding: 50px 0 20px !important; }
+.social-section.section-xs-padding > .section-container { padding: 20px 0 !important; }
+
+
+/* NO Padding
+----------------------------------------------------------------------------- */
+.section-no-padding > .section-container { padding: 0 !important; }
+
+
+/* NO Padding Bottom
+----------------------------------------------------------------------------- */
+.section-no-padding-bottom > .section-container {
+    padding-bottom: 0 !important;
+    margin-bottom: -30px !important;
+}
+
+
+/* Padding 30
+----------------------------------------------------------------------------- */
+.padding-left-30 { padding-left: 30px; }
+.padding-right-30 { padding-right: 30px; }
+.padding-top-30 { padding-top: 30px; }
+.padding-bottom-30 { padding-bottom: 30px; }
+
+
+/* Padding 50
+----------------------------------------------------------------------------- */
+.padding-left-50 { padding-left: 50px; }
+.padding-right-50 { padding-right: 50px; }
+.padding-top-50 { padding-top: 50px; }
+.padding-bottom-50 { padding-bottom: 50px; }
+
+
+/* Padding 100
+----------------------------------------------------------------------------- */
+.padding-left-100 { padding-left: 100px; }
+.padding-right-100 { padding-right: 100px; }
+.padding-top-100 { padding-top: 100px; }
+.padding-bottom-100 { padding-bottom: 100px; }
+
+
+
+
+/* =============================================================================
+   14. Sliders
+============================================================================= */
+/* 14.1 Main Slider ( Swiper )
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.lpbuilder-swiper-slider {
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* Slides
+----------------------------------------------------------------------------- */
+/* Wrapper
+--------------------------------------------------------- */
+.swiper-slide { overflow: hidden; }
+
+
+/* Container
+--------------------------------------------------------- */
+.swiper-slide-container {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+}
+
+
+/* Image Block
+--------------------------------------------------------- */
+.swiper-slide-container > .image-block { padding: 0; }
+.swiper-slide-container > .image-block img {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+
+/* Image
+--------------------------------------------------------- */
+.swiper-slide > img {
+    width: 100%;
+    display: block;
+}
+
+
+/* Active Slide
+--------------------------------------------------------- */
+div[class*='col-'][data-lpbuilder-swiper-slide-to] > div { cursor: pointer; }
+.active-swiper-slide .circle-icon-block {
+    color: #e74c3c !important;
+    background-color: #ffffff !important;
+}
+
+
+/* Arrows
+----------------------------------------------------------------------------- */
+/* Wrapper
+--------------------------------------------------------- */
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next,
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+    opacity: 0;
+    width: 48px;
+    height: 48px;
+    color: #121212;
+    font-size: 32px;
+    margin-top: -24px;
+    line-height: 48px;
+    border-radius: 50%;
+    text-align: center;
+    background-image: none;
+    background-color: #ffffff;
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+       -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+    left: -58px;
+}
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+    right: -58px;
+}
+
+/* Icon
+--------------------------------------------------------- */
+.swiper-button-prev i,
+.swiper-container-rtl .swiper-button-next i {
+    margin-left: -5px;
+}
+.swiper-button-next i,
+.swiper-container-rtl .swiper-button-prev i {
+    margin-right: -5px;
+}
+
+/* Hover
+--------------------------------------------------------- */
+.lpbuilder-swiper-slider:hover .swiper-button-prev,
+.lpbuilder-swiper-slider:hover .swiper-container-rtl .swiper-button-next {
+    opacity: 1;
+    left: 20px;
+}
+.lpbuilder-swiper-slider:hover .swiper-button-next,
+.lpbuilder-swiper-slider:hover .swiper-container-rtl .swiper-button-prev {
+    opacity: 1;
+    right: 20px;
+}
+
+
+/* Pagination
+----------------------------------------------------------------------------- */
+/* Wrapper
+--------------------------------------------------------- */
+.swiper-container-horizontal > .swiper-pagination {
+    bottom: 0;
+    height: 20px;
+    line-height: 0;
+}
+.section-no-padding .swiper-container-horizontal > .swiper-pagination { bottom: 10px; }
+
+
+/* Fade, Vertical, Background Sliders and No Pagination
+--------------------------------------------------------- */
+.fade-swiper-slider .swiper-pagination,
+.vertical-swiper-slider .swiper-pagination,
+.background-swiper-slider .swiper-pagination,
+.no-pagination-swiper-slider .swiper-pagination {
+    display: none;
+}
+
+
+/* Dots
+--------------------------------------------------------- */
+.swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet { margin: 0; }
+.swiper-pagination-bullet {
+    opacity: 1;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    position: relative;
+    background-color: transparent;
+}
+
+.swiper-pagination-bullet::after {
+    top: 5px;
+    left: 5px;
+    content: '';
+    width: 10px;
+    height: 10px;
+    opacity: 0.50;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #e74c3c;
+
+    -webkit-transform: scale(0.70);
+       -moz-transform: scale(0.70);
+        -ms-transform: scale(0.70);
+         -o-transform: scale(0.70);
+            transform: scale(0.70);
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+       -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Active / Hover
+--------------------------------------------------------- */
+.swiper-pagination-bullet:hover::after,
+.swiper-pagination-bullet-active::after {
+    opacity: 1;
+
+    -webkit-transform: scale(0.90);
+       -moz-transform: scale(0.90);
+        -ms-transform: scale(0.90);
+         -o-transform: scale(0.90);
+            transform: scale(0.90);
+}
+
+
+/* Hover
+----------------------------------------------------------------------------- */
+.swiper-button-prev:hover,
+.swiper-container-rtl .swiper-button-next:hover,
+.swiper-button-next:hover,
+.swiper-container-rtl .swiper-button-prev:hover {
+    color: #ffffff;
+    background-color: #e74c3c;
+}
+
+
+/* Fancybox
+----------------------------------------------------------------------------- */
+.lpbuilder-swiper-slider[data-swiper-items="1"] .image-block-container .fancybox img {
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+}
+
+
+
+/* 14.2 Background Slider
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.background-swiper-slider {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+
+/* 14.3 Slider With thumbs
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.thumbs-swiper-slider {
+    overflow: visible;
+    margin-bottom: 40px;
+}
+
+
+/* Pagination
+----------------------------------------------------------------------------- */
+/* Wrapper
+--------------------------------------------------------- */
+.thumbs-swiper-slider .swiper-pagination-tumbs {
+    z-index: 10;
+    width: 100%;
+    height: 80px;
+    font-size: 0;
+    line-height: 0;
+    margin-top: -40px;
+    position: relative;
+    text-align: center;
+}
+
+/* Dots
+--------------------------------------------------------- */
+.swiper-pagination-tumbs span {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: -5px 2px 0;
+    display: inline-block;
+    background-color: #121212;
+
+    -webkit-transform: scale(0.90);
+       -moz-transform: scale(0.90);
+        -ms-transform: scale(0.90);
+         -o-transform: scale(0.90);
+            transform: scale(0.90);
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+       -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Image
+--------------------------------------------------------- */
+.swiper-pagination-tumbs span img {
+    width: 100%;
+    opacity: 0.70;
+    display: block;
+    border-radius: 50%;
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+
+/* Hover / Active
+--------------------------------------------------------- */
+.swiper-pagination-tumbs span:hover img,
+.swiper-pagination-tumbs span.active-swiper-slide img {
+    opacity: 1;
+}
+
+.swiper-pagination-tumbs span:hover,
+.swiper-pagination-tumbs span.active-swiper-slide {
+    -webkit-transform: scale(1);
+       -moz-transform: scale(1);
+        -ms-transform: scale(1);
+         -o-transform: scale(1);
+            transform: scale(1);
+}
+
+
+
+/* 14.4 Coverflow Slider
+============================================================================= */
+/* Slide
+----------------------------------------------------------------------------- */
+.coverflow-swiper-slider .swiper-slide { width: 33.33333333%; }
+
+
+/* Dots
+----------------------------------------------------------------------------- */
+.coverflow-swiper-slider .swiper-pagination { display: none; }
+
+
+/* Shadow
+----------------------------------------------------------------------------- */
+.coverflow-swiper-slider.swiper-container-3d .swiper-slide-shadow-top,
+.coverflow-swiper-slider.swiper-container-3d .swiper-slide-shadow-left,
+.coverflow-swiper-slider.swiper-container-3d .swiper-slide-shadow-right,
+.coverflow-swiper-slider.swiper-container-3d .swiper-slide-shadow-bottom {
+    left: -1%;
+    width: 102%;
+}
+.coverflow-swiper-slider.swiper-container-3d .swiper-slide-shadow-left,
+.coverflow-swiper-slider.swiper-container-3d .swiper-slide-shadow-right {
+    background-image: -webkit-linear-gradient(90deg, #ffffff 35%, rgba(255, 255, 255, 0) 100%);
+    background-image: -moz-linear-gradient(90deg, #ffffff 35%, rgba(255, 255, 255, 0) 100%);
+    background-image: -ms-linear-gradient(90deg, #ffffff 35%, rgba(255, 255, 255, 0) 100%);
+    background-image: -o-linear-gradient(90deg, #ffffff 35%, rgba(255, 255, 255, 0) 100%);
+    background-image: linear-gradient(0deg, #ffffff 35%, rgba(255, 255, 255, 0) 100%);
+}
+
+.grey-section .coverflow-swiper-slider.swiper-container-3d .swiper-slide-shadow-left,
+.grey-section .coverflow-swiper-slider.swiper-container-3d .swiper-slide-shadow-right {
+    background-image: -webkit-linear-gradient(90deg, #f7f7f7 35%, rgba(255, 255, 255, 0) 100%);
+    background-image: -moz-linear-gradient(90deg, #f7f7f7 35%, rgba(255, 255, 255, 0) 100%);
+    background-image: -ms-linear-gradient(90deg, #f7f7f7 35%, rgba(255, 255, 255, 0) 100%);
+    background-image: -o-linear-gradient(90deg, #f7f7f7 35%, rgba(255, 255, 255, 0) 100%);
+    background-image: linear-gradient(0deg, #f7f7f7 35%, rgba(255, 255, 255, 0) 100%);
+}
+
+
+
+/* 14.5 Centered Slider
+============================================================================= */
+/* Overlayer
+----------------------------------------------------------------------------- */
+.center-swiper-slider .swiper-slide::after {
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    content: '';
+    height: 100%;
+    position: absolute;
+    background-color: transparent;
+}
+.center-swiper-slider .swiper-slide-active::after { display: none; }
+
+
+/* Portfolio
+----------------------------------------------------------------------------- */
+.center-swiper-slider .portfolio-block-container .image-block ~ * {
+    opacity: 0;
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+.center-swiper-slider .swiper-slide-active .portfolio-block-container .image-block ~ * { opacity: 1; }
+
+
+
+/* 14.6 Mobile Slider
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.mobile-slider {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    max-width: 760px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto 30px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+
+/* Arrows
+----------------------------------------------------------------------------- */
+.mobile-slider .lpbuilder-swiper-slider:hover .swiper-button-prev,
+.mobile-slider .lpbuilder-swiper-slider:hover .swiper-container-rtl .swiper-button-next {
+    left: 5px;
+}
+.mobile-slider .lpbuilder-swiper-slider:hover .swiper-button-next,
+.mobile-slider .lpbuilder-swiper-slider:hover .swiper-container-rtl .swiper-button-prev {
+    right: 5px;
+}
+
+
+
+/* iPhone Slider
+============================================================================= */
+/* Container
+----------------------------------------------------------------------------- */
+.iphone-slider .mobile-slider-container {
+    top: 0;
+    left: 50%;
+    width: 252px;
+    height: 100%;
+    overflow: hidden;
+    padding-top: 72px;
+    position: absolute;
+    margin-left: -126px;
+    padding-bottom: 72px;
+}
+
+
+/* Frame
+----------------------------------------------------------------------------- */
+.mobile-slider .iphone-frame {
+    width: 290px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+/* 14.7 Portfolio Slider
+============================================================================= */
+/* Container
+----------------------------------------------------------------------------- */
+.lpbuilder-swiper-slider .portfolio-block-container {
+    width: auto;
+    margin-left: -1px;
+    margin-right: -1px;
+}
+
+
+/* Image Block
+----------------------------------------------------------------------------- */
+/* Image
+--------------------------------------------------------- */
+.lpbuilder-swiper-slider .portfolio-block-container .image-block img {
+    -webkit-backface-visibility: hidden !important;
+            backface-visibility: hidden !important;
+}
+
+
+
+/* 14.8 Blog Slider
+============================================================================= */
+/* Post Block Container
+----------------------------------------------------------------------------- */
+.lpbuilder-swiper-slider .post-block-container { background-color: #e74c3c; }
+
+
+/* Header
+----------------------------------------------------------------------------- */
+.lpbuilder-swiper-slider .post-block-container .post-header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 15;
+    padding: 15px;
+    display: block;
+    min-height: 62px;
+    text-align: right;
+    position: absolute;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0.70) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: -moz-linear-gradient(270deg, rgba(0, 0, 0, 0.70) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: -ms-linear-gradient(270deg, rgba(0, 0, 0, 0.70) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: -o-linear-gradient(270deg, rgba(0, 0, 0, 0.70) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.70) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+
+/* Media
+----------------------------------------------------------------------------- */
+.lpbuilder-swiper-slider .post-block-container .post-media {
+    margin: 0;
+    border-radius: 0;
+
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+}
+.lpbuilder-swiper-slider .post-block-container .post-media > div { border-radius: 0; }
+
+
+/* Footer
+----------------------------------------------------------------------------- */
+.lpbuilder-swiper-slider .post-block-container .post-footer {
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 15;
+    margin-top: 0;
+    position: absolute;
+    background-color: #e74c3c;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    -webkit-transform: translate(0, 55px);
+       -moz-transform: translate(0, 55px);
+        -ms-transform: translate(0, 55px);
+         -o-transform: translate(0, 55px);
+            transform: translate(0, 55px);
+
+    -webkit-transition: opacity 0.30s, transform 0.30s;
+       -moz-transition: opacity 0.30s, transform 0.30s;
+         -o-transition: opacity 0.30s, transform 0.30s;
+            transition: opacity 0.30s, transform 0.30s;
+}
+
+
+/* Avatar
+----------------------------------------------------------------------------- */
+.lpbuilder-swiper-slider .post-block-container .avatar-block {
+    top: 15px;
+    left: 15px;
+    width: 32px;
+    height: 32px;
+}
+
+/* Meta
+----------------------------------------------------------------------------- */
+.lpbuilder-swiper-slider .post-block-container .meta-block-container {
+    color: #ffffff;
+    font-size: 16px;
+}
+.lpbuilder-swiper-slider .post-block-container .meta-block-container span {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.lpbuilder-swiper-slider .post-block-container .meta-block-container span i { color: #ffffff; }
+
+
+/* Title
+----------------------------------------------------------------------------- */
+.lpbuilder-swiper-slider .post-block-container .post-footer h4 { margin: 0; }
+
+
+/* Link
+----------------------------------------------------------------------------- */
+.lpbuilder-swiper-slider .post-block-container .post-footer h4 a {
+    width: 100%;
+    display: block;
+    color: #ffffff;
+    overflow: hidden;
+    line-height: 30px;
+    position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 15px 20px 10px;
+    background-color: #e74c3c;
+}
+.lpbuilder-swiper-slider .post-block-container .post-footer h4 a::after {
+    left: 0;
+    top: -5px;
+    width: 100%;
+    height: 5px;
+    content: '';
+    position: absolute;
+
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+       -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Image Block
+----------------------------------------------------------------------------- */
+/* Wrapper
+--------------------------------------------------------- */
+.lpbuilder-swiper-slider .post-block-container .post-media .image-block { overflow: hidden; }
+
+/* Container
+--------------------------------------------------------- */
+.lpbuilder-swiper-slider .post-block-container .post-media .image-block-container {
+    width: auto;
+    margin-top: 0;
+    margin-right: -1px;
+}
+
+/* Image
+--------------------------------------------------------- */
+.lpbuilder-swiper-slider .post-block-container .post-media .image-block img {
+    -webkit-transition: transform 0.30s;
+       -moz-transition: transform 0.30s;
+         -o-transition: transform 0.30s;
+            transition: transform 0.30s;
+}
+
+
+/* Hover
+----------------------------------------------------------------------------- */
+.lpbuilder-swiper-slider .post-block-container:hover .post-media .image-block img {
+    -webkit-transform: translate(0, -55px);
+       -moz-transform: translate(0, -55px);
+        -ms-transform: translate(0, -55px);
+         -o-transform: translate(0, -55px);
+            transform: translate(0, -55px);
+}
+
+.lpbuilder-swiper-slider .post-block-container:hover .post-footer {
+    opacity: 1;
+
+    -webkit-transform: translate(0, 0);
+       -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+         -o-transform: translate(0, 0);
+            transform: translate(0, 0);
+}
+
+
+
+
+/* =============================================================================
+   15. Portfolio
+============================================================================= */
+/* 15.1 Background Portfolio Grid
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.background-portfolio-grid {
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+
+/* Container
+----------------------------------------------------------------------------- */
+.background-portfolio-grid-container {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* Overlayer
+----------------------------------------------------------------------------- */
+.background-portfolio-grid-container::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    content: '';
+    width: 100%;
+    height: 100%;
+    opacity: 0.70;
+    position: absolute;
+    background-color: #121212;
+}
+
+
+/* Loader
+----------------------------------------------------------------------------- */
+.ri-grid-loading:after,
+.ri-grid-loading:before {
+    display: none;
+}
+.ri-loading-image { display: none; }
+.ri-grid-loading .ri-loading-image {
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: relative;
+    margin: 100px 0 0 -15px;
+}
+
+
+/* List
+----------------------------------------------------------------------------- */
+.background-portfolio-grid-container ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    list-style: none;
+    position: relative;
+}
+
+
+/* Items
+----------------------------------------------------------------------------- */
+.background-portfolio-grid-container ul li {
+    margin: 0;
+    padding: 0;
+    float: left;
+    display: block;
+    overflow: hidden;
+    position: relative;
+
+    -webkit-perspective: 400px;
+       -moz-perspective: 400px;
+        -ms-perspective: 400px;
+         -o-perspective: 400px;
+            perspective: 400px;
+}
+
+
+/* Link
+----------------------------------------------------------------------------- */
+.background-portfolio-grid-container ul li a {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    display: block;
+    position: absolute;
+
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+
+
+/* 15.2 Filter Block
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.filter-block {
+    width: 100%;
+    z-index: 20;
+    display: block;
+    margin: 0 auto;
+    max-width: 1170px;
+    position: relative;
+}
+.filter-block::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+
+/* Container
+----------------------------------------------------------------------------- */
+.filter-block-container {
+    padding: 0;
+    z-index: 3;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+.filter-block-container::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+
+/* Filter
+----------------------------------------------------------------------------- */
+.filter-group {
+    width: 100%;
+    display: block;
+    position: relative;
+    margin: 0 auto 30px;
+}
+
+
+
+/* 15.3 Filter Items
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.filter-items-wrapper {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 5px;
+    position: relative;
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+
+
+/* Container
+----------------------------------------------------------------------------- */
+.filter-items-container {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+/* Correct Position
+----------------------------------------------------------------------------- */
+.filter-items-wrapper.correct-position { margin-bottom: 30px; }
+
+
+
+/* 15.4 Portfolio Block
+============================================================================= */
+/* Container
+----------------------------------------------------------------------------- */
+.portfolio-block-container {
+    width: 100%;
+    display: block;
+    position: relative;
+    margin: 0 auto 30px;
+}
+.portfolio-block-container::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+
+/* Main Link
+----------------------------------------------------------------------------- */
+.portfolio-block-container a.main-link {
+    width: 100%;
+    display: block;
+    position: relative;
+    outline: none !important;
+}
+.portfolio-block-container a.main-link::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+
+/* Image Block
+----------------------------------------------------------------------------- */
+/* Wrapper
+--------------------------------------------------------- */
+.portfolio-block-container .image-block { margin-bottom: 25px !important; }
+.portfolio-block-container .image-block:last-child { margin-bottom: 0 !important; }
+
+/* Link
+--------------------------------------------------------- */
+.portfolio-block-container .image-block a {
+    width: 100%;
+    display: block;
+}
+
+/* Image
+--------------------------------------------------------- */
+.portfolio-block-container .image-block a img,
+.portfolio-block-container a.main-link .image-block img {
+    border-radius: 2px;
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+       -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Overlayer
+--------------------------------------------------------- */
+.portfolio-block-container a.main-link .image-block::after {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    position: absolute;
+    background-color: #000000;
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+
+
+/* Typography
+----------------------------------------------------------------------------- */
+/* h4
+--------------------------------------------------------- */
+.portfolio-block-container h4 {
+    width: auto;
+    z-index: 16;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+.portfolio-block-container h4:last-child { margin: 0; }
+
+/* h6
+--------------------------------------------------------- */
+.portfolio-block-container h4 + h6 {
+    margin-top: -5px;
+    margin-bottom: 15px;
+}
+.portfolio-block-container h4 + h6:last-child { margin-bottom: 0; }
+
+
+/* List Icon
+----------------------------------------------------------------------------- */
+.portfolio-block-container .list-icon { margin-top: 0; }
+
+
+/* Link
+----------------------------------------------------------------------------- */
+.portfolio-block-container a { color: #121212; }
+.portfolio-block-container a:hover { color: #e74c3c; }
+
+
+/* Button
+----------------------------------------------------------------------------- */
+.portfolio-block-container a.btn { margin-top: 20px; }
+
+
+/* Hover
+----------------------------------------------------------------------------- */
+.portfolio-block-container:hover a.main-link h4 { color: #e74c3c; }
+.portfolio-block-container:hover a.main-link .image-block::after { opacity: 0.50; }
+
+
+
+/* Styles
+============================================================================= */
+/* Styles 1 & 2
+============================================================================= */
+/* Main Link
+----------------------------------------------------------------------------- */
+.portfolio-block-style-1 a.main-link,
+.portfolio-block-style-2 a.main-link {
+    z-index: 15;
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px;
+
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+       -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+.portfolio-block-style-2 a.main-link { background-color: #e74c3c; }
+
+
+/* Block Image
+----------------------------------------------------------------------------- */
+/* Wrapper
+--------------------------------------------------------- */
+.portfolio-block-style-1 a.main-link .image-block,
+.portfolio-block-style-2 a.main-link .image-block {
+    overflow: hidden;
+    margin-bottom: 0 !important;
+}
+
+/* Container
+--------------------------------------------------------- */
+.portfolio-block-style-1 a.main-link .image-block-container,
+.portfolio-block-style-2 a.main-link .image-block-container {
+    width: auto;
+    margin-right: -1px;
+}
+
+/* Image
+--------------------------------------------------------- */
+.portfolio-block-style-1 a.main-link .image-block img,
+.portfolio-block-style-2 a.main-link .image-block img {
+    border-radius: 0;
+
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+}
+
+
+/* Typography
+----------------------------------------------------------------------------- */
+/* h4
+--------------------------------------------------------- */
+.portfolio-block-style-1 a.main-link h4,
+.portfolio-block-style-2 a.main-link h4 {
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    color: #ffffff;
+    line-height: 25px;
+    padding: 15px 20px;
+    position: absolute;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+.portfolio-block-style-1 a.main-link h4 {
+    width: auto;
+    max-width: 100%;
+    background-color: transparent;
+
+    -webkit-transform: scale(1.5);
+       -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+         -o-transform: scale(1.5);
+            transform: scale(1.5);
+}
+
+.portfolio-block-style-2 a.main-link h4 {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-color: #e74c3c;
+    border-radius: 0 0 2px 2px;
+
+    -webkit-transform: translate(0, 55px);
+       -moz-transform: translate(0, 55px);
+        -ms-transform: translate(0, 55px);
+         -o-transform: translate(0, 55px);
+            transform: translate(0, 55px);
+}
+
+.portfolio-block-style-2 h4::after {
+    left: 0;
+    top: -5px;
+    width: 100%;
+    height: 5px;
+    content: '';
+    position: absolute;
+
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+       -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Hover
+----------------------------------------------------------------------------- */
+.portfolio-block-style-1 .portfolio-block-container:hover a.main-link h4 {
+    opacity: 1;
+    color: #ffffff;
+
+    -webkit-transform: scale(1);
+       -moz-transform: scale(1);
+        -ms-transform: scale(1);
+         -o-transform: scale(1);
+            transform: scale(1);
+}
+
+.portfolio-block-style-2 .portfolio-block-container:hover .image-block img {
+    opacity: 1;
+
+    -webkit-transform: translate(0, -55px);
+       -moz-transform: translate(0, -55px);
+        -ms-transform: translate(0, -55px);
+         -o-transform: translate(0, -55px);
+            transform: translate(0, -55px);
+}
+
+.portfolio-block-style-2 .portfolio-block-container:hover a.main-link h4 {
+    opacity: 1;
+    color: #ffffff;
+
+    -webkit-transform: translate(0, 0);
+       -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+         -o-transform: translate(0, 0);
+            transform: translate(0, 0);
+}
+
+.portfolio-block-style-1 .portfolio-block-container:hover a.main-link .image-block::after,
+.portfolio-block-style-2 .portfolio-block-container:hover a.main-link .image-block::after {
+    opacity: 0.80;
+}
+
+
+/* Style 3
+============================================================================= */
+/* Image Block
+----------------------------------------------------------------------------- */
+/* Wrapper
+--------------------------------------------------------- */
+.portfolio-block-style-3 .portfolio-block-container > .image-block {
+    padding: 20px;
+    background-color: #ffffff;
+    border: 10px solid #000000;
+
+    -webkit-box-shadow: 0 10px 7px -5px rgba(0, 0, 0, 0.30);
+       -moz-box-shadow: 0 10px 7px -5px rgba(0, 0, 0, 0.30);
+            box-shadow: 0 10px 7px -5px rgba(0, 0, 0, 0.30);
+}
+
+/* Image
+--------------------------------------------------------- */
+.portfolio-block-style-3 .portfolio-block-container > .image-block img {
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+}
+
+
+/* Typography
+----------------------------------------------------------------------------- */
+.portfolio-block-style-3 .portfolio-block-container > h4 {
+    width: auto;
+    font-size: 16px;
+    display: inline-block;
+    padding: 10px 25px 9px;
+    background-color: #ffffff;
+
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.12);
+       -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+
+
+/* 15.5 Portfolio Wide Block
+============================================================================= */
+/* Image Block
+----------------------------------------------------------------------------- */
+.wide-block .portfolio-block-container .image-block { margin-bottom: 0 !important; }
+.wide-block .portfolio-block-container a.main-link,
+.wide-block .portfolio-block-container .image-block img,
+.wide-block .portfolio-block-container .image-block::after {
+    border-radius: 0 !important;
+
+    -webkit-box-shadow: none !important;
+       -moz-box-shadow: none !important;
+            box-shadow: none !important;
+}
+
+
+/* Typography
+----------------------------------------------------------------------------- */
+.wide-block .portfolio-block-container h4 {
+    border-radius: 0 !important;
+    padding: 15px 20px !important;
+}
+
+
+
+/* 15.6 Portfolio Photostack
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.photostack-block {
+    width: 100%;
+    height: 550px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+
+/* Container
+----------------------------------------------------------------------------- */
+.photostack-block-container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+/* Item Block
+----------------------------------------------------------------------------- */
+/* Wrapper
+--------------------------------------------------------- */
+.photostack-block-container > div.portfolio-block {
+    margin: 0;
+    z-index: 10;
+    display: block;
+    position: absolute;
+    text-align: center;
+}
+.photostack-block-container > div.portfolio-block.photostack-current.photostack-flip { z-index: 11; }
+
+/* Overlayer
+--------------------------------------------------------- */
+.photostack-block-container > div.portfolio-block::after {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: 10;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    position: absolute;
+    visibility: visible;
+    background-color: transparent;
+
+    -webkit-transition: opacity 0.6s, visibility 0s 0.6s;
+       -moz-transition: opacity 0.6s, visibility 0s 0.6s;
+         -o-transition: opacity 0.6s, visibility 0s 0.6s;
+            transition: opacity 0.6s, visibility 0s 0.6s;
+}
+.photostack-block-container > div.portfolio-block.photostack-current::after {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Container
+--------------------------------------------------------- */
+.photostack-block-container > div.portfolio-block .portfolio-block-container { margin-bottom: 0; }
+
+
+/* Navigation
+----------------------------------------------------------------------------- */
+/* Wrapper
+--------------------------------------------------------- */
+.lpbuilder-photostack-nav-wrapper {
+    width: 100%;
+    height: 20px;
+    line-height: 0;
+    margin-top: -30px;
+}
+
+/* Pagination
+--------------------------------------------------------- */
+/* Wrapper
+------------------------------------- */
+.lpbuilder-photostack-nav-wrapper nav {
+    width: auto;
+    z-index: 90;
+    height: 20px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+
+    -webkit-transition: opacity 0.30s;
+       -moz-transition: opacity 0.30s;
+         -o-transition: opacity 0.30s;
+            transition: opacity 0.30s;
+}
+
+/* Dots
+------------------------------------- */
+.lpbuilder-photostack-nav-wrapper nav span {
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    opacity: 0.50;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+.lpbuilder-photostack-nav-wrapper nav span::after {
+    top: 5px;
+    left: 5px;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #e74c3c;
+
+    -webkit-transform: scale(0.70);
+       -moz-transform: scale(0.70);
+        -ms-transform: scale(0.70);
+         -o-transform: scale(0.70);
+            transform: scale(0.70);
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+       -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Hover
+------------------------------------- */
+.lpbuilder-photostack-nav-wrapper nav span:hover,
+.lpbuilder-photostack-nav-wrapper nav span.current {
+    opacity: 1;
+}
+.lpbuilder-photostack-nav-wrapper nav span:hover::after,
+.lpbuilder-photostack-nav-wrapper nav span.current::after {
+    -webkit-transform: scale(0.90);
+       -moz-transform: scale(0.90);
+        -ms-transform: scale(0.90);
+         -o-transform: scale(0.90);
+            transform: scale(0.90);
+}
+
+/* Arrows
+--------------------------------------------------------- */
+/* Wrapper
+------------------------------------- */
+.lpbuilder-photostack-prev,
+.lpbuilder-photostack-next {
+    top: 50%;
+    opacity: 0;
+    z-index: 15;
+    width: 48px;
+    height: 48px;
+    color: #121212;
+    cursor: pointer;
+    margin-top: -24px;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    background-color: #ffffff;
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+       -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+.lpbuilder-photostack-prev { left: -58px; }
+.lpbuilder-photostack-next { right: -58px; }
+
+
+/* Icon
+------------------------------------- */
+.lpbuilder-photostack-prev::after,
+.lpbuilder-photostack-next::after {
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    display: block;
+    font-size: 32px;
+    line-height: 46px;
+    position: absolute;
+    text-align: center;
+    border-radius: 50%;
+    font-family: 'FontAwesome';
+}
+.lpbuilder-photostack-prev::after {
+    content: '\f104';
+    padding-right: 2px;
+}
+.lpbuilder-photostack-next::after {
+    content: '\f105';
+    padding-left: 2px;
+}
+
+/* Hover
+------------------------------------- */
+.lpbuilder-photostack-prev:hover,
+.lpbuilder-photostack-next:hover {
+    color: #ffffff;
+    background-color: #e74c3c;
+
+    -webkit-box-shadow: 0 5px 11px rgba(0, 0, 0, 0.18), 0 4px 15px rgba(0, 0, 0, 0.15);
+       -moz-box-shadow: 0 5px 11px rgba(0, 0, 0, 0.18), 0 4px 15px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 5px 11px rgba(0, 0, 0, 0.18), 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.photostack-block:hover .lpbuilder-photostack-prev {
+    opacity: 1;
+    left: 20px;
+}
+.photostack-block:hover .lpbuilder-photostack-next {
+    opacity: 1;
+    right: 20px;
+}
+
+
+/* Blocks Animation
+----------------------------------------------------------------------------- */
+.photostack-transition .portfolio-block {
+    -webkit-transition: -webkit-transform 0.6s ease-in-out;
+       -moz-transition: -moz-transform 0.6s ease-in-out;
+         -o-transition: -o-transform 0.6s ease-in-out;
+            transition: transform 0.6s ease-in-out;
+}
+
+.photostack-perspective .portfolio-block {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+.photostack-perspective .portfolio-block.photostack-flip {
+    -webkit-transform-origin: 0% 50%;
+       -moz-transform-origin: 0% 50%;
+        -ms-transform-origin: 0% 50%;
+         -o-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+}
+
+
+
+
+/* =============================================================================
+   16. Blog
+============================================================================= */
+/* 16.1 Post Block
+============================================================================= */
+/* Container
+----------------------------------------------------------------------------- */
+.post-block-container {
+    width: 100%;
+    display: block;
+    padding: 0 0 60px;
+    position: relative;
+    margin: 0 auto 50px;
+    border-bottom: 1px solid #dddddd;
+}
+.post-block:last-child .post-block-container {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+}
+
+
+/* Header
+----------------------------------------------------------------------------- */
+.post-block-container .post-header {
+    width: 100%;
+    z-index: 10;
+    display: block;
+    margin: 0 auto;
+    line-height: 0;
+    min-height: 56px;
+    position: relative;
+    padding: 2px 0 0 70px;
+}
+.post-block-container .post-header::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+
+/* Media
+----------------------------------------------------------------------------- */
+.post-block-container .post-media {
+    padding: 0;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    border-radius: 2px;
+    margin: 30px auto 0;
+
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.12);
+       -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+.post-block-container .post-media * { margin-bottom: 0 !important; }
+.post-block-container .post-media > div {
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+
+/* Footer
+----------------------------------------------------------------------------- */
+.post-block-container .post-footer {
+    width: 100%;
+    display: block;
+    margin-top: 30px;
+    position: relative;
+}
+
+
+/* Avatar
+----------------------------------------------------------------------------- */
+.post-block-container .avatar-block {
+    top: 0;
+    left: 0;
+    width: 56px;
+    height: 56px;
+    position: absolute;
+}
+
+
+/* Title
+----------------------------------------------------------------------------- */
+.post-block-container .post-header h4 {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Link
+----------------------------------------------------------------------------- */
+/* Wrapper
+--------------------------------------------------------- */
+.post-block-container .post-header h4 a {
+    color: #121212;
+    display: inline-block;
+}
+
+.post-block-container .post-media .image-block a {
+    width: 100%;
+    display: block;
+}
+
+/* Hover
+--------------------------------------------------------- */
+.post-block-container .post-header h4 a:hover { color: #e74c3c; }
+
+
+
+/* 16.2 Timeline
+============================================================================= */
+/* Item
+----------------------------------------------------------------------------- */
+.timeline-block-center .timeline-block-item:nth-child(odd) .post-block { padding-right: 25px; }
+.timeline-block-center .timeline-block-item:nth-child(even) .post-block { padding-left: 25px; }
+
+
+/* Container
+----------------------------------------------------------------------------- */
+.timeline-block-center .timeline-block-item .post-block-container {
+    border: 0;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+}
+.timeline-block-center .timeline-block-item:last-child .post-block-container { margin-bottom: 0; }
+
+
+/* Dots
+----------------------------------------------------------------------------- */
+.timeline-block-center .timeline-block-item .post-block-container::after,
+.timeline-block-center .timeline-block-item .post-block-container::before {
+    left: 100%;
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-color: #ffffff;
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+.timeline-block-center .timeline-block-item .post-block-container::after {
+    top: 22px;
+    width: 12px;
+    height: 12px;
+    margin-left: 19px;
+    border: 2px solid #e74c3c;
+}
+.timeline-block-center .timeline-block-item .post-block-container::before {
+    top: 12px;
+    width: 32px;
+    height: 32px;
+    margin-left: 9px;
+}
+
+.grey-section .timeline-block-center .timeline-block-item .post-block-container::after,
+.grey-section .timeline-block-center .timeline-block-item .post-block-container::before {
+    background-color: #f7f7f7;
+}
+
+.timeline-block-center .timeline-block-item:nth-child(even) .post-block-container::after {
+    left: 0;
+    margin-left: -31px;
+}
+.timeline-block-center .timeline-block-item:nth-child(even) .post-block-container::before {
+    left: 0;
+    margin-left: -41px;
+}
+
+
+/* Hover
+----------------------------------------------------------------------------- */
+.timeline-block-center .timeline-block-item .post-block-container:hover::after { background-color: #e74c3c; }
+
+
+
+/* 16.3 Pagination
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+nav.lpbuilder-pagination {
+    padding: 0;
+    width: 100%;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+    margin: 0 auto 25px;
+}
+
+
+/* List
+----------------------------------------------------------------------------- */
+nav.lpbuilder-pagination ul.pagination {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    border-radius: 0;
+    display: inline-block;
+}
+
+
+/* Items
+----------------------------------------------------------------------------- */
+nav.lpbuilder-pagination ul.pagination > li {
+    margin: 5px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    display: inline-block;
+}
+
+
+/* Link
+----------------------------------------------------------------------------- */
+nav.lpbuilder-pagination ul.pagination > li > a,
+nav.lpbuilder-pagination ul.pagination > li > span {
+    border: 0;
+    padding: 0;
+    width: 100%;
+    margin-left: 0;
+    color: #515151;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50% !important;
+
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.10), 0 1px 2px rgba(0, 0, 0, 0.20);
+       -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.10), 0 1px 2px rgba(0, 0, 0, 0.20);
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.10), 0 1px 2px rgba(0, 0, 0, 0.20);
+}
+nav.lpbuilder-pagination ul.pagination > li > a span { font-size: 16px; }
+
+
+/* Hover / Focus / Active / Disabled
+----------------------------------------------------------------------------- */
+nav.lpbuilder-pagination ul.pagination > li > a:hover,
+nav.lpbuilder-pagination ul.pagination > li > a:focus,
+nav.lpbuilder-pagination ul.pagination > li >span:hover,
+nav.lpbuilder-pagination ul.pagination > li > span:focus,
+nav.lpbuilder-pagination ul.pagination > .active > a,
+nav.lpbuilder-pagination ul.pagination > .active > span,
+nav.lpbuilder-pagination ul.pagination > .active > a:focus,
+nav.lpbuilder-pagination ul.pagination > .active > a:hover,
+nav.lpbuilder-pagination ul.pagination > .active > span:focus,
+nav.lpbuilder-pagination ul.pagination > .active > span:hover,
+nav.lpbuilder-pagination ul.pagination > .disabled > a,
+nav.lpbuilder-pagination ul.pagination > .disabled > span,
+nav.lpbuilder-pagination ul.pagination > .disabled > a:focus,
+nav.lpbuilder-pagination ul.pagination > .disabled > a:hover,
+nav.lpbuilder-pagination ul.pagination > .disabled > span:focus,
+nav.lpbuilder-pagination ul.pagination > .disabled > span:hover {
+    color: #ffffff;
+    background-color: #e74c3c;
+}
+
+
+
+/* 16.4 Post Tags Block
+============================================================================= */
+/* Container
+----------------------------------------------------------------------------- */
+.post-tags-block-container {
+    width: 100%;
+    display: block;
+    line-height: 44px;
+    margin-bottom: 30px;
+}
+
+
+/* span
+----------------------------------------------------------------------------- */
+.post-tags-block-container > span {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+
+/* Button
+----------------------------------------------------------------------------- */
+.post-tags-block-container a.btn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+
+/* 16.5 Post Share Block
+============================================================================= */
+/* Container
+----------------------------------------------------------------------------- */
+.post-share-block-container {
+    width: 100%;
+    display: block;
+    line-height: 42px;
+    margin: 5px auto 30px;
+}
+
+
+/* span
+----------------------------------------------------------------------------- */
+.post-share-block-container > span {
+    margin-right: 10px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+
+/* 16.6 Post Comments Block
+============================================================================= */
+/* Container
+----------------------------------------------------------------------------- */
+.post-comments-block-container {
+    width: 100%;
+    display: block;
+    margin: 5px auto 30px;
+}
+
+
+
+
+/* =============================================================================
+   17. Block Variations
+============================================================================= */
+/* Sticky Block
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.sticky-block {
+    margin-top: 100px;
+    position: relative;
+    margin-bottom: -70px;
+}
+.sticky-block::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+
+/* NO Padding
+----------------------------------------------------------------------------- */
+.section-no-padding .sticky-block {
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+.section-no-padding .col-md-12.title-block-style-1.sticky-block .title-block-container { margin-bottom: 5px; }
+
+
+/* NO Padding Bottom
+----------------------------------------------------------------------------- */
+.section-no-padding-bottom .sticky-block {
+    margin-top: 130px;
+    margin-bottom: 30px;
+}
+
+
+/* Large Padding
+----------------------------------------------------------------------------- */
+.section-lg-padding .sticky-block {
+    margin-top: 160px;
+    margin-bottom: -130px;
+}
+
+
+/* Medium Padding
+----------------------------------------------------------------------------- */
+.section-md-padding .sticky-block {
+    margin-top: 145px;
+    margin-bottom: -115px;
+}
+
+
+/* Small Padding
+----------------------------------------------------------------------------- */
+.section-sm-padding .sticky-block {
+    margin-top: 125px;
+    margin-bottom: -95px;
+}
+
+
+/* Wide Block
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.wide-block { padding: 0; }
+
+
+/* Container
+----------------------------------------------------------------------------- */
+.wide-block > div { margin-bottom: 0 !important; }
+
+
+/* Remove border radius & box shadow
+----------------------------------------------------------------------------- */
+.wide-block .fancybox,
+.wide-block a.main-link,
+.wide-block .fancybox::before,
+.wide-block .image-block img {
+    border-radius: 0 !important;
+
+    -webkit-box-shadow: none !important;
+       -moz-box-shadow: none !important;
+            box-shadow: none !important;
+}
+
+
+
+
+/* =============================================================================
+   18. Title Block
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.col-md-12.title-block + div { clear: left; }
+
+
+/* Container
+----------------------------------------------------------------------------- */
+.title-block-container {
+    padding: 0;
+    width: 100%;
+    z-index: 15;
+    display: block;
+    font-size: 18px;
+    position: relative;
+    margin: 0 auto 15px;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+.title-block-container::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+
+/* Text Center
+----------------------------------------------------------------------------- */
+.title-block-container.text-center { margin-bottom: 30px; }
+.title-block-container.text-center p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Hero Section
+----------------------------------------------------------------------------- */
+.hero-section .title-block-container.text-center {
+    font-size: 26px;
+    letter-spacing: 0.5px;
+}
+.hero-section .title-block-container.text-center a.btn { margin-top: 65px; }
+
+
+/* Logo
+----------------------------------------------------------------------------- */
+/* Link
+--------------------------------------------------------- */
+.title-block-container .navbar-brand {
+    float: none;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+/* Image
+--------------------------------------------------------- */
+.title-block-container .navbar-brand > img { max-height: 80px; }
+
+
+
+/* Typography
+----------------------------------------------------------------------------- */
+/* h1
+--------------------------------------------------------- */
+.title-block-container h1 { margin-top: -5px; }
+.title-block-container.text-center h1 {
+    line-height: 1;
+    font-size: 60px;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+
+/* h2
+--------------------------------------------------------- */
+.title-block-container h2 { margin-top: -5px; }
+.title-block-container h2 + h3 { margin-top: -5px; }
+
+
+/* Line Separator
+----------------------------------------------------------------------------- */
+.line-separator {
+    width: 40px;
+    height: 3px;
+    display: block;
+    margin: 20px 0 10px;
+    background-color: #121212;
+}
+.text-center .line-separator { margin: 25px auto; }
+.line-separator + h4 { margin-top: 25px; }
+
+
+
+/* Style 1
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.title-block-style-1 {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Container
+----------------------------------------------------------------------------- */
+.title-block-style-1 .title-block-container {
+    overflow: hidden;
+    border-radius: 2px;
+    margin-bottom: 30px;
+    padding: 35px 30px 25px;
+    background-color: #ffffff;
+
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.12);
+       -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Typography
+----------------------------------------------------------------------------- */
+/* h3
+--------------------------------------------------------- */
+.title-block-style-1 h3:last-child { margin-bottom: 5px; }
+
+/* Paragraph
+--------------------------------------------------------- */
+.hero-section .title-block-style-1 .title-block-container.text-center {
+    font-size: 22px;
+    line-height: 1.4;
+}
+.title-block-style-1 .title-block-container p:last-child { margin-bottom: 5px; }
+.title-block-style-1 .title-block-container p:first-of-type { padding-top: 10px; }
+
+
+/* Buttons
+----------------------------------------------------------------------------- */
+.title-block-style-1 .title-block-container a.btn,
+.hero-section .title-block-style-1 .title-block-container.text-center a.btn {
+    margin-top: 35px;
+    margin-bottom: 14px;
+}
+
+
+
+/* Label
+============================================================================= */
+/* Main Wrapper
+----------------------------------------------------------------------------- */
+.main-title-label-block,
+.white-title-label-block,
+.black-title-label-block {
+    z-index: 10;
+    padding: 0 !important;
+    line-height: 0 !important;
+    margin: 0 auto 15px !important;
+}
+
+
+/* span
+----------------------------------------------------------------------------- */
+.main-title-label-block span,
+.white-title-label-block span,
+.black-title-label-block span {
+    line-height: 1;
+    overflow: hidden;
+    padding: 15px 30px;
+    position: relative;
+    border-radius: 2px;
+    display: inline-block;
+
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+       -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Main Title Label
+----------------------------------------------------------------------------- */
+.main-title-label-block span {
+    color: #ffffff;
+    background-color: #e74c3c;
+}
+
+
+/* White Title Label
+----------------------------------------------------------------------------- */
+.white-title-label-block span {
+    color: #121212;
+    background-color: #ffffff;
+}
+
+
+/* Black Title Label
+----------------------------------------------------------------------------- */
+.black-title-label-block span {
+    color: #ffffff;
+    background-color: #121212;
+}
+
+
+
+
+
+
+/* =============================================================================
+   19. Background Image Block
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.background-image-block {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+
+/* Main Image
+----------------------------------------------------------------------------- */
+.background-image-block img {
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+.background-image-block img.mobile-image { display: none; }
+
+
+/* No Parallax Effect
+----------------------------------------------------------------------------- */
+.no-parallax-effect img,
+.ie9 .background-image-block img {
+    top: 50% !important;
+
+    -webkit-transform: translate(-50%, -50%) !important;
+       -moz-transform: translate(-50%, -50%) !important;
+        -ms-transform: translate(-50%, -50%) !important;
+         -o-transform: translate(-50%, -50%) !important;
+            transform: translate(-50%, -50%) !important;
+}
+
+
+
+
+/* =============================================================================
+   20. Image Block
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.image-block {
+    width: 100%;
+    z-index: 10;
+    margin: 0 auto;
+    display: block;
+    padding: 50px 0 0;
+    position: relative;
+}
+
+
+/* Container
+----------------------------------------------------------------------------- */
+.image-block-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+/* One Image
+----------------------------------------------------------------------------- */
+.image-block-container img {
+    top: 0;
+    right: 0;
+    width: auto;
+    height: 100%;
+    position: absolute;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+.pull-right .image-block-container img {
+    left: 0;
+    right: auto;
+}
+
+.pull-center .image-block-container img,
+.pull-center .image-block-container img {
+    left: 50%;
+
+    -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+         -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+
+
+/* Two Images
+----------------------------------------------------------------------------- */
+.image-block-container img:nth-child(2) { right: 100px; }
+
+.pull-right .image-block-container img:nth-child(2) {
+    left: 100px;
+    right: auto;
+}
+
+
+/* Three Images
+----------------------------------------------------------------------------- */
+.image-block-container img:nth-child(2) { z-index: 8; }
+.image-block-container img:nth-last-child(2) { z-index: 9; }
+.image-block-container img:nth-last-child(3) { z-index: 10; }
+
+
+
+/* Inside col
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+div[class*='col-'] .image-block {
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+
+/* Image
+----------------------------------------------------------------------------- */
+div[class*='col-'] .image-block-container img {
+    top: 0;
+    left: auto;
+    right: auto;
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+}
+div[class*='col-'] .image-block-container img ~ img {
+    left: 0;
+    position: absolute;
+}
+
+
+
+
+/* =============================================================================
+   21. Fancybox
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.fancybox {
+    z-index: 25;
+    display: block;
+    text-align: center;
+    outline: none !important;
+}
+
+.image-block-container .fancybox {
+    top: 0;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    border-radius: 3px;
+    position: relative;
+
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+}
+
+*:not(.image-block-container) > .fancybox {
+    top: 15px;
+    right: 15px;
+    position: absolute;
+}
+
+
+/* Image
+----------------------------------------------------------------------------- */
+.image-block-container .fancybox img {
+    border-radius: 2px;
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+       -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Icon
+----------------------------------------------------------------------------- */
+.fancybox::after {
+    opacity: 0;
+    z-index: 15;
+    width: 32px;
+    height: 32px;
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    content: '\f002';
+    line-height: 32px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #e74c3c;
+    font-family: 'FontAwesome';
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    -webkit-transform: translateY(-40%);
+       -moz-transform: translateY(-40%);
+        -ms-transform: translateY(-40%);
+         -o-transform: translateY(-40%);
+            transform: translateY(-40%);
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+.image-block-container .fancybox::after {
+    top: 15px;
+    right: 15px;
+    position: absolute;
+}
+
+.fancybox.fancybox-video::after {
+    content: '\f04b';
+    padding-left: 2px;
+}
+
+
+/* Overlayer
+----------------------------------------------------------------------------- */
+.image-block-container .fancybox::before {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    border-radius: 2px;
+    background-color: #000000;
+
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+
+
+/* Hover
+----------------------------------------------------------------------------- */
+.fancybox:hover::after,
+*:not(.image-block-container):hover > .fancybox::after {
+    opacity: 1;
+
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+}
+
+.image-block-container .fancybox:hover::before { opacity: 0.50; }
+
+
+/* Expand Icon
+----------------------------------------------------------------------------- */
+/* Wrapper
+--------------------------------------------------------- */
+.fancybox-overlay .expander {
+    top: 0;
+    left: 0;
+    margin: 5px;
+    z-index: 99999;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    text-align: center;
+    outline: none !important;
+}
+
+
+/* Icon
+--------------------------------------------------------- */
+.fancybox-overlay .expander::after {
+    width: 32px;
+    height: 32px;
+    display: block;
